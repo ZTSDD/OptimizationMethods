@@ -1,0 +1,15 @@
+﻿Methods realization:
+	* Zero order methods:
+		- SwannAlg +
+		- UniformSearch +
+		- Bisection
+		- Dichotomy
+		- GoldenRatio
+	* First order methods:
+		- Constant step gradient descent
+		- Steepest gradient descent
+		- Coordinate slope
+	* Configurations
+	* Deform poly
+
+Known bugs:
