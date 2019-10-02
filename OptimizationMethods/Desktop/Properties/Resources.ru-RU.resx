@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CheckEquationCaption" xml:space="preserve">
-    <value>Check equation</value>
+    <value>Проверить уравнение</value>
   </data>
   <data name="EquationInputLabel" xml:space="preserve">
-    <value>Equation input field:</value>
+    <value>Ввод уравнения:</value>
   </data>
   <data name="MathViewLabel" xml:space="preserve">
-    <value>Math view:</value>
+    <value>Математическое представление:</value>
   </data>
   <data name="OutputLabel" xml:space="preserve">
-    <value>Output:</value>
+    <value>Вывод:</value>
   </data>
 </root>

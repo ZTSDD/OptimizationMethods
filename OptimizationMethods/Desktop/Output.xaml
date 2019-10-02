@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Desktop.Output"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Desktop"
+             xmlns:props="clr-namespace:Desktop.Properties"
+             MinHeight="200"
+             MinWidth="400"
+             mc:Ignorable="d" Background="White" Height="117.367" Width="168.805">
+    <Grid>
+        <Label Content="{x:Static props:Resources.OutputLabel}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <RichTextBox Margin="10,40,10,10">
+            <FlowDocument>
+                <Paragraph>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</UserControl>
