@@ -156,4 +156,7 @@
   <data name="OutputLabel" xml:space="preserve">
     <value>Вывод:</value>
   </data>
+  <data name="SelectMethodLabel" xml:space="preserve">
+    <value>Выберите метод:</value>
+  </data>
 </root>

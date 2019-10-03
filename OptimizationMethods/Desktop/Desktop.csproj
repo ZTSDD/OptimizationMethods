@@ -61,15 +61,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="EquationInput.xaml">
+    <Page Include="Views\Controls\EquationInput.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EquationMathView.xaml">
+    <Page Include="Views\Controls\EquationMathView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -77,37 +77,40 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EquationInput.xaml.cs">
+    <Compile Include="MethodType.cs" />
+    <Compile Include="Models\EquationOptions.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\Controls\EquationInput.xaml.cs">
       <DependentUpon>EquationInput.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EquationMathView.xaml.cs">
+    <Compile Include="Views\Controls\EquationMathView.xaml.cs">
       <DependentUpon>EquationMathView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="OptionsInput.xaml">
+    <Page Include="Views\Controls\OptionsInput.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Output.xaml">
+    <Page Include="Views\Controls\Output.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OxyPlot.xaml">
+    <Page Include="Views\Controls\OxyPlot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OptionsInput.xaml.cs">
+    <Compile Include="Views\Controls\OptionsInput.xaml.cs">
       <DependentUpon>OptionsInput.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Output.xaml.cs">
+    <Compile Include="Views\Controls\Output.xaml.cs">
       <DependentUpon>Output.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OxyPlot.xaml.cs">
+    <Compile Include="Views\Controls\OxyPlot.xaml.cs">
       <DependentUpon>OxyPlot.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -144,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj">
+      <Project>{b3708d6f-4439-488d-a9ad-15f4a88587a5}</Project>
+      <Name>Backend</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

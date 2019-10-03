@@ -176,5 +176,14 @@ namespace Desktop.Properties {
                 return ResourceManager.GetString("OutputLabel", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select method:.
+        /// </summary>
+        public static string SelectMethodLabel {
+            get {
+                return ResourceManager.GetString("SelectMethodLabel", resourceCulture);
+            }
+        }
     }
 }
