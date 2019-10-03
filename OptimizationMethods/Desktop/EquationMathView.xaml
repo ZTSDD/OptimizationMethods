@@ -7,11 +7,13 @@
              xmlns:props="clr-namespace:Desktop.Properties"
              MinWidth="400"
              MinHeight="100"
-             mc:Ignorable="d" Background="White">
-    <Grid>
-        <Label x:Name="MathViewLabel" Content="{x:Static props:Resources.MathViewLabel}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontSize="18"/>
-        <Border x:Name="MathViewBorder" BorderBrush="Black" BorderThickness="1" Margin="10,35,10,10">
-            <TextBlock x:Name="MathViewTextBlock" Margin="0" TextWrapping="Wrap" Text="TextBlock" FontSize="18" Foreground="Black" TextAlignment="Center" VerticalAlignment="Center" />
-        </Border>
-    </Grid>
+             mc:Ignorable="d">
+    <Border BorderBrush="Black" BorderThickness="1" Margin="1">
+        <Grid>
+            <Label x:Name="MathViewLabel" Content="{x:Static props:Resources.MathViewLabel}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontSize="18"/>
+            <Border x:Name="MathViewBorder" BorderBrush="Black" BorderThickness="1" Margin="10,35,10,10">
+                <TextBlock x:Name="MathViewTextBlock" Margin="0" TextWrapping="Wrap" Text="{x:Static props:Resources.InDevelopContent}" FontSize="18" Foreground="Black" TextAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+        </Grid>
+    </Border>
 </UserControl>

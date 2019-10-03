@@ -3,17 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:props="clr-namespace:Desktop.Properties"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        MinHeight="600"
-        MinWidth="800"
-        Width="800"
-        Height="600"
+        MinHeight="700"
+        MinWidth="1000"
+        Width="1000"
+        Height="700"
         Title="MainWindow" Background="#FFF1FFC0" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel Margin="0,0,0,0" VerticalAlignment="Top">
+        <Grid Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <local:EquationInput VerticalAlignment="Top" HorizontalAlignment="Stretch" />
-            <local:EquationMathView HorizontalAlignment="Stretch" />
-        </StackPanel>
+            <local:EquationMathView HorizontalAlignment="Stretch" Grid.Row="1" />
+            <local:OptionsInput Grid.Row="2"/>
+            <local:OxyPlot Margin="0" Grid.RowSpan="4" Grid.Column="1"/>
+            <Button Content="{x:Static props:Resources.CalculateBtnContent}" Grid.Row="3" Width="120" Height="30" HorizontalAlignment="Left" FontSize="18"/>
+            <local:Output Height="Auto" Margin="0" Width="Auto" Grid.ColumnSpan="2" Grid.Row="4"/>
+        </Grid>
     </Grid>
 </Window>

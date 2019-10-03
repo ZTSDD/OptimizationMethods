@@ -117,11 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddOptionsLabel" xml:space="preserve">
+    <value>Additional options</value>
+  </data>
+  <data name="BeginIntervalLabel" xml:space="preserve">
+    <value>Begin:</value>
+  </data>
+  <data name="CalculateBtnContent" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="calculationsLabel" xml:space="preserve">
+    <value>Кол-во вычислений:</value>
+  </data>
   <data name="CheckEquationCaption" xml:space="preserve">
     <value>Check equation</value>
   </data>
+  <data name="eLabel" xml:space="preserve">
+    <value>e:</value>
+  </data>
+  <data name="EndIntervalLabel" xml:space="preserve">
+    <value>End:</value>
+  </data>
   <data name="EquationInputLabel" xml:space="preserve">
     <value>Equation input field:</value>
+  </data>
+  <data name="InDevelopContent" xml:space="preserve">
+    <value>In development...</value>
+  </data>
+  <data name="IntervalLabel" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="lLabel" xml:space="preserve">
+    <value>l:</value>
   </data>
   <data name="MathViewLabel" xml:space="preserve">
     <value>Math view:</value>

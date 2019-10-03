@@ -61,6 +61,42 @@ namespace Desktop.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Additional options.
+        /// </summary>
+        public static string AddOptionsLabel {
+            get {
+                return ResourceManager.GetString("AddOptionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Begin:.
+        /// </summary>
+        public static string BeginIntervalLabel {
+            get {
+                return ResourceManager.GetString("BeginIntervalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Calculate.
+        /// </summary>
+        public static string CalculateBtnContent {
+            get {
+                return ResourceManager.GetString("CalculateBtnContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кол-во вычислений:.
+        /// </summary>
+        public static string calculationsLabel {
+            get {
+                return ResourceManager.GetString("calculationsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Check equation.
         /// </summary>
         public static string CheckEquationCaption {
@@ -70,11 +106,56 @@ namespace Desktop.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на e:.
+        /// </summary>
+        public static string eLabel {
+            get {
+                return ResourceManager.GetString("eLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на End:.
+        /// </summary>
+        public static string EndIntervalLabel {
+            get {
+                return ResourceManager.GetString("EndIntervalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Equation input field:.
         /// </summary>
         public static string EquationInputLabel {
             get {
                 return ResourceManager.GetString("EquationInputLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на In development....
+        /// </summary>
+        public static string InDevelopContent {
+            get {
+                return ResourceManager.GetString("InDevelopContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Interval.
+        /// </summary>
+        public static string IntervalLabel {
+            get {
+                return ResourceManager.GetString("IntervalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на l:.
+        /// </summary>
+        public static string lLabel {
+            get {
+                return ResourceManager.GetString("lLabel", resourceCulture);
             }
         }
         

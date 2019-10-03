@@ -7,7 +7,7 @@
              xmlns:props="clr-namespace:Desktop.Properties"
              MinHeight="200"
              MinWidth="400"
-             mc:Ignorable="d" Background="White" Height="117.367" Width="168.805">
+             mc:Ignorable="d" Height="117.367" Width="168.805">
     <Grid>
         <Label Content="{x:Static props:Resources.OutputLabel}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
         <RichTextBox Margin="10,40,10,10">

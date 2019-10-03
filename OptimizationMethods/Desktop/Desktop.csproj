@@ -87,6 +87,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OptionsInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Output.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,6 +101,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OptionsInput.xaml.cs">
+      <DependentUpon>OptionsInput.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Output.xaml.cs">
       <DependentUpon>Output.xaml</DependentUpon>
     </Compile>
