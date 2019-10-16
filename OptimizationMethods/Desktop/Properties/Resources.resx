@@ -156,6 +156,9 @@
   <data name="OutputLabel" xml:space="preserve">
     <value>Output:</value>
   </data>
+  <data name="OxyPlotName" xml:space="preserve">
+    <value>Graphic</value>
+  </data>
   <data name="SelectMethodLabel" xml:space="preserve">
     <value>Select method:</value>
   </data>

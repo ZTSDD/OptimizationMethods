@@ -6,7 +6,8 @@
              xmlns:props="clr-namespace:Desktop.Properties"
              xmlns:local="clr-namespace:Desktop"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+             x:Name="ThisUserControl"
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" Margin="1">
             <Grid>
@@ -22,39 +23,47 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="{x:Static props:Resources.SelectMethodLabel}" Grid.Column="0" HorizontalAlignment="Left" Margin="0" Grid.Row="0" VerticalAlignment="Top"/>
-                <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="0" Grid.Row="0" VerticalAlignment="Top" Width="120"/>
+                <DockPanel Grid.ColumnSpan="3" Margin="30,0">
+                    <Label Content="{x:Static props:Resources.SelectMethodLabel}" Grid.Column="0" HorizontalAlignment="Right" Margin="0" Grid.Row="0" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="MethodSelector" ItemsSource="{Binding Path=MethodTypes}" SelectedItem="{Binding Path=SelectedMethod}" Margin="0" Grid.Row="0" VerticalAlignment="Center" Grid.Column="2"/>
+                </DockPanel>
                 <Label Content="{x:Static props:Resources.IntervalLabel}" Margin="0" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                 <Label Content="{x:Static props:Resources.BeginIntervalLabel}" Margin="0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" Grid.Row="2"/>
-                <TextBox Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="18" Grid.Row="2" Width="120"/>
+                <TextBox Grid.Column="1" Margin="0" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="{Binding Path=BegInput}" VerticalAlignment="Center" FontSize="18" Grid.Row="2" Width="120"/>
                 <Label Content="{x:Static props:Resources.EndIntervalLabel}" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="0" Grid.Row="3" FontSize="18"/>
-                <TextBox Grid.Column="1" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="18" Width="120"/>
-                
-                <Label Content="{x:Static props:Resources.AddOptionsLabel}" Margin="0" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2"/>
-                <StackPanel Grid.Column="2" Margin="0" Grid.Row="1" Grid.RowSpan="4">
-                    <Grid>
+                <TextBox Grid.Column="1" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Path=EndInput}" VerticalAlignment="Center" FontSize="18" Width="120"/>
+
+                <Label Content="{x:Static props:Resources.AddOptionsLabel}" Margin="0" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2"/>
+                <StackPanel Grid.Column="2" Margin="0" Grid.Row="2" Grid.RowSpan="4">
+                    <Grid  x:Name="CInputBox" Visibility="Collapsed">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="{x:Static props:Resources.calculationsLabel}" FontSize="18" HorizontalAlignment="Right"/>
-                        <TextBox Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
+                        <DockPanel Grid.ColumnSpan="2">
+                            <Label Content="{x:Static props:Resources.calculationsLabel}" FontSize="18" HorizontalAlignment="Right"/>
+                            <TextBox Grid.Column="1" Text="{Binding Path=CInput}" FontSize="18" VerticalAlignment="Center"/>
+                        </DockPanel>
                     </Grid>
-                    <Grid>
+                    <Grid x:Name="LInputBox" Visibility="Collapsed">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="{x:Static props:Resources.lLabel}" FontSize="18" HorizontalAlignment="Right"/>
-                        <TextBox Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
+                        <DockPanel Grid.ColumnSpan="2">
+                            <Label Content="{x:Static props:Resources.lLabel}" FontSize="18" HorizontalAlignment="Right"/>
+                            <TextBox Grid.Column="1" FontSize="18" Text="{Binding Path=LInput}" VerticalAlignment="Center"/>
+                        </DockPanel>
                     </Grid>
-                    <Grid>
+                    <Grid x:Name="EInputBox" Visibility="Collapsed">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="{x:Static props:Resources.eLabel}" HorizontalAlignment="Right" FontSize="18"/>
-                        <TextBox Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
+                        <DockPanel Grid.ColumnSpan="2">
+                            <Label Content="{x:Static props:Resources.eLabel}" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBox Grid.Column="1" FontSize="18" Text="{Binding Path=EInput}" VerticalAlignment="Center"/>
+                        </DockPanel>
                     </Grid>
                 </StackPanel>
 

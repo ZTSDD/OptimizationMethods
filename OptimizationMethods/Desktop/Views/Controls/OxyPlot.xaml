@@ -5,11 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:oxy="http://oxyplot.org/wpf"
              xmlns:local="clr-namespace:Desktop"
+             xmlns:props="clr-namespace:Desktop.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <oxy:PlotView>
-            
-        </oxy:PlotView>
-    </Grid>
+    <Border BorderBrush="Black" BorderThickness="1" Margin="1">
+        <Grid>
+
+            <TextBlock Text="{x:Static props:Resources.OxyPlotName}" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" />
+            <oxy:PlotView Background="{x:Null}">
+            </oxy:PlotView>
+        </Grid>
+    </Border>
 </UserControl>

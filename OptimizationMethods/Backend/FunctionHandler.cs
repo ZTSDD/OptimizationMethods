@@ -1,4 +1,5 @@
 ﻿using org.mariuszgromada.math.mxparser;
+using System;
 
 namespace Backend
 {
@@ -9,6 +10,8 @@ namespace Backend
         public FunctionHandler(string functionPart)
         {
             this.function = new Function($"F(x) = {functionPart}");
+            if (!function.checkSyntax())
+                throw new ArgumentException();
         }
 
         public double Calculate(double x)

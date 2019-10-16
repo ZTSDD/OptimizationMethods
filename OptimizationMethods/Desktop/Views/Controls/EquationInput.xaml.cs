@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.ViewModels.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace Desktop
     /// </summary>
     public partial class EquationInput : UserControl
     {
+        public EquationInputViewModel ViewModel { get; set; }
+
         public EquationInput()
         {
             InitializeComponent();
+            this.ViewModel = new EquationInputViewModel();
+            this.DataContext = this.ViewModel;
         }
     }
 }

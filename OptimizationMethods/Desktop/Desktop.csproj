@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathParser.org-mXparser, Version=4.3.3.0, Culture=neutral, PublicKeyToken=0fbab7add73ed6e2, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathParser.org-mXparser.4.3.3\lib\net472\MathParser.org-mXparser.dll</HintPath>
+    </Reference>
     <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
       <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
     </Reference>
@@ -65,7 +68,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Controls\EquationMathView.xaml">
+    <Page Include="Views\Controls\LatexPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,12 +82,17 @@
     </Compile>
     <Compile Include="MethodType.cs" />
     <Compile Include="Models\EquationOptions.cs" />
+    <Compile Include="Models\InputModel.cs" />
+    <Compile Include="ViewModels\Controls\EquationInputViewModel.cs" />
+    <Compile Include="ViewModels\Controls\LatexPresenterViewModel.cs" />
+    <Compile Include="ViewModels\Controls\OptionsInputViewModel.cs" />
+    <Compile Include="ViewModels\Controls\OutputViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\Controls\EquationInput.xaml.cs">
       <DependentUpon>EquationInput.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Controls\EquationMathView.xaml.cs">
-      <DependentUpon>EquationMathView.xaml</DependentUpon>
+    <Compile Include="Views\Controls\LatexPresenter.xaml.cs">
+      <DependentUpon>LatexPresenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -153,6 +161,9 @@
       <Project>{b3708d6f-4439-488d-a9ad-15f4a88587a5}</Project>
       <Name>Backend</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

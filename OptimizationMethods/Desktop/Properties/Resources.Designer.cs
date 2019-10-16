@@ -178,6 +178,15 @@ namespace Desktop.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Graphic.
+        /// </summary>
+        public static string OxyPlotName {
+            get {
+                return ResourceManager.GetString("OxyPlotName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Select method:.
         /// </summary>
         public static string SelectMethodLabel {

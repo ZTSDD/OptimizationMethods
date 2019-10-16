@@ -1,6 +1,6 @@
 ﻿namespace Desktop
 {
-    enum MethodType
+    public enum MethodType
     {
         Bisection,
         Dichotomy,

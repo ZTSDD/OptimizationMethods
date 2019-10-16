@@ -18,9 +18,9 @@ namespace Desktop
     /// <summary>
     /// Логика взаимодействия для EquationMathView.xaml
     /// </summary>
-    public partial class EquationMathView : UserControl
+    public partial class LatexPresenter : UserControl
     {
-        public EquationMathView()
+        public LatexPresenter()
         {
             InitializeComponent();
         }

@@ -9,8 +9,8 @@
              MinWidth="400"
              mc:Ignorable="d" Height="117.367" Width="168.805">
     <Grid>
-        <Label Content="{x:Static props:Resources.OutputLabel}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <RichTextBox Margin="10,40,10,10">
+        <Label Content="{x:Static props:Resources.OutputLabel}" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" FontSize="18"/>
+        <RichTextBox x:Name="OutputBox" Margin="0,30,0,0">
             <FlowDocument>
                 <Paragraph>
                 </Paragraph>

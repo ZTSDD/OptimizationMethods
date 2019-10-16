@@ -12,8 +12,8 @@
         <Border BorderBrush="Black" BorderThickness="1" Margin="1">
         <StackPanel>
             <Label x:Name="EquationInputLabel" Content="{x:Static props:Resources.EquationInputLabel}" FontSize="18" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-            <TextBox x:Name="EquationInputField" TextWrapping="Wrap" Text="" Margin="2,0" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" FontSize="18" Background="White"/>
-            <Button x:Name="EquationCheckButton" Content="{x:Static props:Resources.CheckEquationCaption}" HorizontalAlignment="Center" Margin="0,10,0,10" VerticalAlignment="Top" FontSize="18" BorderBrush="Black" />
+            <TextBox x:Name="EquationInputField" TextWrapping="Wrap" Text="{Binding Path=EquationInput}" Margin="2,0" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" FontSize="18" Background="White"/>
+            <Button Visibility="Hidden" x:Name="EquationCheckButton" Content="{x:Static props:Resources.CheckEquationCaption}" HorizontalAlignment="Center" Margin="0,10,0,10" VerticalAlignment="Top" FontSize="18" BorderBrush="Black" />
         </StackPanel>
         </Border>
     </Grid>

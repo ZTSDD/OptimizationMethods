@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Desktop
+namespace Desktop.Views
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel ViewModel { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            this.ViewModel = new MainWindowViewModel(this);
+            this.DataContext = ViewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.InitializeCalculations();
         }
     }
 }

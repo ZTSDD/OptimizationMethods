@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Desktop.ViewModels.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +22,20 @@ namespace Desktop
     /// </summary>
     public partial class OptionsInput : UserControl
     {
+        public OptionsInputViewModel ViewModel { get; set; }
+
         public OptionsInput()
         {
             InitializeComponent();
+            this.MethodSelector.ItemsSource = Enum.GetValues(typeof(MethodType));
+            this.DataContext = new OptionsInputViewModel(this);
+            ViewModel = this.DataContext as OptionsInputViewModel;
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

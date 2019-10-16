@@ -1,6 +1,6 @@
 ﻿namespace Backend.Interfaces
 {
-    interface IMethod
+    public interface IMethod
     {
         double Calculate();
     }

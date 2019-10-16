@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.ViewModels.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace Desktop
     /// </summary>
     public partial class Output : UserControl
     {
+        public OutputViewModel ViewModel { get; set; }
         public Output()
         {
             InitializeComponent();
+            this.DataContext = new OutputViewModel(this);
+            ViewModel = this.DataContext as OutputViewModel;
         }
     }
 }
