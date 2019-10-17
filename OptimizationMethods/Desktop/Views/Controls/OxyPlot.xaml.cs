@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Backend;
+using Desktop.ViewModels.Controls;
+using OxyPlot;
+using OxyPlot.Series;
+using OxyPlot.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +25,14 @@ namespace Desktop
     /// </summary>
     public partial class OxyPlot : UserControl
     {
+        public OxyPlotViewModel ViewModel { get; set; }
         public OxyPlot()
         {
             InitializeComponent();
+            this.ViewModel = new OxyPlotViewModel();
+            this.DataContext = ViewModel;
         }
+
+
     }
 }

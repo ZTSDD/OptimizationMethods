@@ -26,6 +26,7 @@ namespace Desktop.ViewModels
         {
             InputModel input = default;
             FunctionHandler functionHandler = default;
+            Interval interval = default;
             IMethod method = default;
             try
             {
@@ -55,7 +56,32 @@ namespace Desktop.ViewModels
             }
             try
             {
-                method = GetMethod(input, functionHandler);
+                interval = new SwannAlg(functionHandler).FindInterval(input.X0, input.T);
+                if (interval == null)
+                    throw new ArgumentNullException();
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Интервал не был найден!",
+                    "Ошибка нахождения интервала",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+            try
+            {
+                MainWindow.OxyPlotControl.ViewModel.Draw(functionHandler, interval.Begin, interval.End);
+            }
+            catch
+            {
+                MessageBox.Show("Не удолось нарисовать!",
+                    "Ошибка отрисовки графика",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+            try
+            {
+                method = GetMethod(interval, input, functionHandler);
             }
             catch
             {
@@ -83,20 +109,20 @@ namespace Desktop.ViewModels
             MainWindow.OutputControl.ViewModel.PrintResult(result);
         }
 
-        private IMethod GetMethod(InputModel input, FunctionHandler functionHandler)
+        private IMethod GetMethod(Interval interval, InputModel input, FunctionHandler functionHandler)
         {
             switch (input.SelectedMethod)
             {
                 case MethodType.Bisection:
-                    return new Bisection(input.Interval, input.L, functionHandler);
+                    return new Bisection(interval, input.L, functionHandler);
                 case MethodType.Dichotomy:
-                    return new Dichotomy(input.Interval, input.E, input.L, functionHandler);
+                    return new Dichotomy(interval, input.E, input.L, functionHandler);
                 case MethodType.Fibonacci:
-                    return new Fibonacci(input.Interval, input.E, input.L, functionHandler);
+                    return new Fibonacci(interval, input.E, input.L, functionHandler);
                 case MethodType.GoldenRatio:
-                    return new GoldenRatio(input.Interval, input.L, functionHandler);
+                    return new GoldenRatio(interval, input.L, functionHandler);
                 case MethodType.UniformSearch:
-                    return new UniformSearch(input.Interval.Begin, input.Interval.End, input.C, functionHandler);
+                    return new UniformSearch(interval.Begin, interval.End, input.C, functionHandler);
                 default:
                     throw new NotImplementedException();
             }

@@ -70,7 +70,7 @@ namespace Desktop.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Begin:.
+        ///   Ищет локализованную строку, похожую на x0:.
         /// </summary>
         public static string BeginIntervalLabel {
             get {
@@ -115,7 +115,7 @@ namespace Desktop.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на End:.
+        ///   Ищет локализованную строку, похожую на t:.
         /// </summary>
         public static string EndIntervalLabel {
             get {

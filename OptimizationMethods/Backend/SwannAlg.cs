@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Backend
 {
-    class SwannAlg
+    public class SwannAlg
     {
         private FunctionHandler functionHandler;
         private enum SwannState
@@ -65,7 +65,7 @@ namespace Backend
             do
             {
                 // The fifth step.
-                xArr[k + 1] = xArr[k] + Math.Pow(2, k) * delta;
+                xArr.Add(xArr[k] + Math.Pow(2, k) * delta);
                 results = new List<double>()
                 {
                     functionHandler.Calculate(xArr[k+1]),
@@ -89,6 +89,7 @@ namespace Backend
                 else
                     a0 = xArr[k + 1];
                 // The interval found. Go out from the cycle.
+                break;
             } while (false);
             return new Interval(a0, b0);
         }
@@ -100,14 +101,14 @@ namespace Backend
             {
                 delta = t;
                 a0 = xArr[0];
-                xArr[1] = xArr[0] + t;
+                xArr.Add(xArr[0] + t);
                 k++;
             }
             if ((initResults[0] <= initResults[1]) && (initResults[1] <= initResults[2]))
             {
                 delta = -t;
                 b0 = xArr[0];
-                xArr[1] = xArr[0] - t;
+                xArr.Add(xArr[0] - t);
                 k++;
             }
         }

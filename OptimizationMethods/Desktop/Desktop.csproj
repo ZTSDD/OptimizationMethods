@@ -87,6 +87,7 @@
     <Compile Include="ViewModels\Controls\LatexPresenterViewModel.cs" />
     <Compile Include="ViewModels\Controls\OptionsInputViewModel.cs" />
     <Compile Include="ViewModels\Controls\OutputViewModel.cs" />
+    <Compile Include="ViewModels\Controls\OxyPlotViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\Controls\EquationInput.xaml.cs">
       <DependentUpon>EquationInput.xaml</DependentUpon>

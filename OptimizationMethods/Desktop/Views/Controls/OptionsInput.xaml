@@ -29,9 +29,9 @@
                 </DockPanel>
                 <Label Content="{x:Static props:Resources.IntervalLabel}" Margin="0" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                 <Label Content="{x:Static props:Resources.BeginIntervalLabel}" Margin="0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" Grid.Row="2"/>
-                <TextBox Grid.Column="1" Margin="0" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="{Binding Path=BegInput}" VerticalAlignment="Center" FontSize="18" Grid.Row="2" Width="120"/>
+                <TextBox Grid.Column="1" Margin="0" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="{Binding Path=X0Input}" VerticalAlignment="Center" FontSize="18" Grid.Row="2" Width="120"/>
                 <Label Content="{x:Static props:Resources.EndIntervalLabel}" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="0" Grid.Row="3" FontSize="18"/>
-                <TextBox Grid.Column="1" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Path=EndInput}" VerticalAlignment="Center" FontSize="18" Width="120"/>
+                <TextBox Grid.Column="1" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Path=TInput}" VerticalAlignment="Center" FontSize="18" Width="120"/>
 
                 <Label Content="{x:Static props:Resources.AddOptionsLabel}" Margin="0" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2"/>
                 <StackPanel Grid.Column="2" Margin="0" Grid.Row="2" Grid.RowSpan="4">

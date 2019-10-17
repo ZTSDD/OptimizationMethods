@@ -27,19 +27,9 @@
             <local:EquationInput x:Name="EquationInputControl" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
             <local:LatexPresenter HorizontalAlignment="Stretch" Grid.Row="1" />
             <local:OptionsInput Grid.Row="2" x:Name="OptionsInputControl"/>
-            <local:OxyPlot Margin="0" Grid.RowSpan="3" Grid.Column="1"/>
+            <local:OxyPlot x:Name="OxyPlotControl" Margin="0" Grid.RowSpan="3" Grid.Column="1"/>
             <Button Content="{x:Static props:Resources.CalculateBtnContent}" Grid.Row="3" Width="200" Height="30" HorizontalAlignment="Left" FontSize="18" Click="Button_Click"/>
             <local:Output x:Name="OutputControl" Height="Auto" Margin="0" Width="Auto" Grid.ColumnSpan="2" Grid.Row="4"/>
-            <Label Content="В разработке" Grid.Column="1" HorizontalAlignment="Left" Margin="26,14,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#00F74949" Foreground="Red" Width="480">
-                <Label.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-35"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Label.RenderTransform>
-            </Label>
         </Grid>
     </Grid>
 </Window>

@@ -11,8 +11,8 @@ namespace Desktop.ViewModels.Controls
     public class OptionsInputViewModel
     {
         private OptionsInput OptionsInput { get; set; }
-        public string BegInput { get; set; }
-        public string EndInput { get; set; }
+        public string X0Input { get; set; }
+        public string TInput { get; set; }
         public string EInput { get; set; }
         public string LInput { get; set; }
         public string CInput { get; set; }

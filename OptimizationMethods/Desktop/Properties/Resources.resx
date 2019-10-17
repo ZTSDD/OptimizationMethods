@@ -121,7 +121,7 @@
     <value>Additional options</value>
   </data>
   <data name="BeginIntervalLabel" xml:space="preserve">
-    <value>Begin:</value>
+    <value>x0:</value>
   </data>
   <data name="CalculateBtnContent" xml:space="preserve">
     <value>Calculate</value>
@@ -136,7 +136,7 @@
     <value>e:</value>
   </data>
   <data name="EndIntervalLabel" xml:space="preserve">
-    <value>End:</value>
+    <value>t:</value>
   </data>
   <data name="EquationInputLabel" xml:space="preserve">
     <value>Equation input field:</value>
