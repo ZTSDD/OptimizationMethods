@@ -25,7 +25,7 @@ namespace Desktop.ViewModels
         public void InitializeCalculations()
         {
             InputModel input = default;
-            FunctionHandler functionHandler = default;
+            SingleVarFunc functionHandler = default;
             Interval interval = default;
             IMethod method = default;
             try
@@ -43,7 +43,7 @@ namespace Desktop.ViewModels
             }
             try
             {
-                functionHandler = new FunctionHandler(MainWindow.EquationInputControl.ViewModel.EquationInput);
+                functionHandler = new SingleVarFunc(MainWindow.EquationInputControl.ViewModel.EquationInput);
             }
             catch
             {
@@ -109,7 +109,7 @@ namespace Desktop.ViewModels
             MainWindow.OutputControl.ViewModel.PrintResult(result);
         }
 
-        private IMethod GetMethod(Interval interval, InputModel input, FunctionHandler functionHandler)
+        private IMethod GetMethod(Interval interval, InputModel input, SingleVarFunc functionHandler)
         {
             switch (input.SelectedMethod)
             {

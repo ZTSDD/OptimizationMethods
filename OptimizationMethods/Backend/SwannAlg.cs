@@ -5,14 +5,14 @@ namespace Backend
 {
     public class SwannAlg
     {
-        private FunctionHandler functionHandler;
+        private SingleVarFunc functionHandler;
         private enum SwannState
         {
             IntervalFound,
             IntervalNotExist,
             Continue
         }
-        public SwannAlg(FunctionHandler functionHandler)
+        public SwannAlg(SingleVarFunc functionHandler)
         {
             this.functionHandler = functionHandler;
         }

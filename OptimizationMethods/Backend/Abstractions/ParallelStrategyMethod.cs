@@ -7,7 +7,7 @@ namespace Backend.Abstractions
         protected double beginInterval = default;
         protected double endInterval = default;
         protected int calculations = default;
-        protected FunctionHandler functionHandler = default;
+        protected SingleVarFunc functionHandler = default;
 
         public abstract double Calculate();
     }

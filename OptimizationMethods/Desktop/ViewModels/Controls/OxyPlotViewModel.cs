@@ -17,7 +17,7 @@ namespace Desktop.ViewModels.Controls
         {
             this.MyModel = new PlotModel { Title = "Func" };
         }
-        public void Draw(FunctionHandler functionHandler, double x0, double x1)
+        public void Draw(SingleVarFunc functionHandler, double x0, double x1)
         {
             this.MyModel.Series.Add(new FunctionSeries(functionHandler.Calculate, x0, x1, 0.1, "Current func"));
             this.MyModel.InvalidatePlot(true);

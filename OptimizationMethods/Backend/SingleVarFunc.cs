@@ -3,11 +3,11 @@ using System;
 
 namespace Backend
 {
-    public class FunctionHandler
+    public class SingleVarFunc
     {
         private Function function;
         private string funcHead = "F(x)";
-        public FunctionHandler(string functionPart)
+        public SingleVarFunc(string functionPart)
         {
             this.function = new Function($"F(x) = {functionPart}");
             if (!function.checkSyntax())

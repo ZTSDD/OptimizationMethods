@@ -4,7 +4,7 @@ namespace Backend.Methods.ZeroOrderMethods.Minimization
 {
     public class UniformSearch : ParallelStrategyMethod
     {
-        public UniformSearch(double beg, double end, int calculations, FunctionHandler functionHandler)
+        public UniformSearch(double beg, double end, int calculations, SingleVarFunc functionHandler)
         {
             beginInterval = beg;
             endInterval = end;

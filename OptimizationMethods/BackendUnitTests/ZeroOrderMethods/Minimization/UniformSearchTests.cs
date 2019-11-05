@@ -11,7 +11,7 @@ namespace BackendUnitTests.ZeroOrderMethods.Minimization
         [TestMethod]
         public void Calculate_ShouldReturnXPosWhereFunctionResultIsMinimum()
         {
-            var functionHandler = new FunctionHandler("2 * x ^ 2 - 12 * x");
+            var functionHandler = new SingleVarFunc("2 * x ^ 2 - 12 * x");
             var uniformSearch = new UniformSearch(0, 10, 9, functionHandler);
 
             var result = uniformSearch.Calculate();

@@ -10,7 +10,7 @@ namespace Backend.Methods.ZeroOrderMethods.Minimization
         private double e = default;
         private double l = default;
 
-        public Dichotomy(Interval interval, double e, double l, FunctionHandler functionHandler)
+        public Dichotomy(Interval interval, double e, double l, SingleVarFunc functionHandler)
         {
             aArr.Add(interval.Begin);
             bArr.Add(interval.End);

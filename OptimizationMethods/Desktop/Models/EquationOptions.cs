@@ -9,12 +9,12 @@ namespace Desktop.Models
 {
     class EquationOptions
     {
-        FunctionHandler functionHandler;
+        SingleVarFunc functionHandler;
         private Dictionary<string, double> options;
         MethodType methodType;
 
         public EquationOptions(
-            FunctionHandler functionHandler, 
+            SingleVarFunc functionHandler, 
             Dictionary<string, double> options)
         {
             this.functionHandler = functionHandler ??

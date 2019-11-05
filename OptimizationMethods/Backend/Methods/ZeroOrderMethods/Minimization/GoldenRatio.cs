@@ -9,7 +9,7 @@ namespace Backend.Methods.ZeroOrderMethods.Minimization
     {
         private double l = default;
 
-        public GoldenRatio(Interval interval, double l, FunctionHandler functionHandler)
+        public GoldenRatio(Interval interval, double l, SingleVarFunc functionHandler)
         {
             aArr.Add(interval.Begin);
             bArr.Add(interval.End);

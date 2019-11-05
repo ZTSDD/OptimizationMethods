@@ -10,7 +10,7 @@ namespace Backend.Methods.ZeroOrderMethods.Minimization
         private List<double> xAverageArr = new List<double>();
         private List<double> xAverageResults = new List<double>();
 
-        public Bisection(Interval interval, double l, FunctionHandler functionHandler)
+        public Bisection(Interval interval, double l, SingleVarFunc functionHandler)
         {
             aArr.Add(interval.Begin);
             bArr.Add(interval.End);

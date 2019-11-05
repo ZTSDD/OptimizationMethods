@@ -11,7 +11,7 @@ namespace Backend.Methods.ZeroOrderMethods.Minimization
         private double e = default;
         private double l = default;
 
-        public Fibonacci(Interval interval, double e, double l, FunctionHandler functionHandler)
+        public Fibonacci(Interval interval, double e, double l, SingleVarFunc functionHandler)
         {
             aArr.Add(interval.Begin);
             bArr.Add(interval.End);

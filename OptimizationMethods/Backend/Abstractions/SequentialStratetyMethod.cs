@@ -13,7 +13,7 @@ namespace Backend.Abstractions
         protected List<double> zArr = new List<double>();
         protected List<double> yResults = new List<double>();
         protected List<double> zResults = new List<double>();
-        protected FunctionHandler functionHandler = default;
+        protected SingleVarFunc functionHandler = default;
 
         public abstract double Calculate();
     }
