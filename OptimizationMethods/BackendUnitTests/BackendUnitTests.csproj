@@ -52,6 +52,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstOrderMethods\SteepestGradientDescentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FirstOrderMethods\ConstantStepGradientDescentTests.cs" />
     <Compile Include="ZeroOrderMethods\Minimization\BisectionTests.cs" />
